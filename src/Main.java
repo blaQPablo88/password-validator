@@ -45,7 +45,7 @@ public class Main {
         return false;
     }
 
-    //has at least one special character
+    //has at least 1 special character
     public static boolean special_characters(String password) {
         String specialChar = password.replaceAll("[a-zA-Z0-9]", "");
         for (char pass_char : specialChar.toCharArray()) {
