@@ -1,8 +1,8 @@
 
 public class Main {
     public static void main(String[] args) {
-        String password = "8£";
-        if (validate_length(password) && validate_case(password)) {
+        String password = "123456Ab";
+        if (validate_length(password) && validate_case(password) && validate_digit(password)) {
             System.out.println("Password Is Secured");
         } else {
             System.out.println("Password Not Secured");
