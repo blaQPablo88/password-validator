@@ -24,7 +24,7 @@ public class Main {
             if (Character.isUpperCase(pass_char)) {
                 pass_upperCase = true;
             }
-            if (Character.isUpperCase(pass_char)) {
+            if (Character.isLowerCase(pass_char)) {
                 pass_lowerCase = true;
             }
             if (pass_lowerCase && pass_upperCase) {
@@ -47,13 +47,17 @@ public class Main {
 
     //has at least 1 special character
     public static boolean special_characters(String password) {
-        String specialChar = password.replaceAll("[a-zA-Z0-9]", "");
+        // String specialChar = password.replaceAll("[a-zA-Z0-9]", "");
+        /*
         for (char pass_char : specialChar.toCharArray()) {
+
             if (!Character.isLetterOrDigit(pass_char)) {
                 return true;
             }
         }
         return false;
+        */
+        return password.replaceAll("[a-zA-Z0_9]", "").length() > 0;
     }
 
 }
