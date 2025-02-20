@@ -36,7 +36,7 @@ public class Main {
         return false;
     }
 
-    // has at least 1 digit
+    // has at least one digit
     public static boolean validate_digit(String password) {
         for (char pass_char : password.toCharArray()) {
             if (Character.isDigit(pass_char)) {
