@@ -1,7 +1,8 @@
 
 public class Main {
+
     public static void main(String[] args) {
-        String password = "123456Ab";
+        String password = "123456A^j";
         if (validate_length(password) && validate_case(password) && validate_digit(password) && special_characters(password)) {
             System.out.println("Password Is Secured");
         } else {
@@ -47,8 +48,8 @@ public class Main {
 
     //has at least 1 special character
     public static boolean special_characters(String password) {
-        // String specialChar = password.replaceAll("[a-zA-Z0-9]", "");
-        /*
+        String specialChar = password.replaceAll("[a-zA-Z0-9]", "");
+
         for (char pass_char : specialChar.toCharArray()) {
 
             if (!Character.isLetterOrDigit(pass_char)) {
@@ -56,8 +57,8 @@ public class Main {
             }
         }
         return false;
-        */
-        return password.replaceAll("[a-zA-Z0_9]", "").length() > 0;
+
+        // return password.replaceAll("[a-zA-Z0_9]", "").length() > 0;
     }
 
 }
